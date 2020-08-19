@@ -2,7 +2,7 @@ while True:
     # Take input from the user
     first_number = float(input("Enter first number: "))
     operand=input("Enter operation with number:  +, -, *, /, **  ")
-    # Check if choice is one of the four options
+    # Check if choice is one of the five options
     if operand in ('+', '-', '*', '/','**'):
 
         second_number = float(input("Enter second number: "))
@@ -21,7 +21,7 @@ while True:
             else: print(first_number, "/", second_number, "=", first_number/second_number)
 
         elif operand == '**':
-            print(first_number, "/", second_number, "=", first_number**second_number)
+            print(first_number, "**", second_number, "=", first_number**second_number)
         break
     else:
            if input("Invalid Input. Continue? y/n   ") == 'n':
