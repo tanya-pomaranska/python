@@ -48,7 +48,6 @@ print(f"List of Float: {list_of_floats}")
 # (Послідовність чисел Фібоначі 0, 1, 1, 2, 3, 5, 8, 13 і т.д.)
 fib_number = [0,1]
 n = int(input("Enter n number for a series of Fibonacci numbers: "))
-previous_number = 0
 for next in range(0,n+1):
     fib_number.append(fib_number[next]+fib_number[next+1])
 
