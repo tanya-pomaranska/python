@@ -29,4 +29,20 @@ n = int(input("Enter number for Factorial: "))
 for next_number in range(1,n+1):
     factorial_number*=next_number
 
-print(f"Factorial !{n} is {factorial_number}")
+print(f"Factorial {n}! is {factorial_number}")
+
+#Напишіть скрипт, який перевіряє логін, який вводить користувач.
+# Якщо логін вірний (“First”), то привітайте користувача.
+# Якщо ні, то виведіть повідомлення про помилку.
+# (необхідно використати цикл while)
+
+right_login = False
+
+while not right_login:
+
+    my_login = input("Enter your login: ")
+
+    right_login = True  if my_login == "First" else  print("Login is wrong")
+
+else: print("Hello. You are in")
+
