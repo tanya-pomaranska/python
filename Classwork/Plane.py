@@ -5,6 +5,9 @@ WHITE = (255, 255, 255)
 BLACK = (0, 0, 0)
 WIDTH_DISPLAY=500
 HEIGHT_DISPLAY=500
+WIDTH_IMAGE=50
+HEIGHT_IMAGE=50
+
 # Call this function so the Pygame library can initialize itself
 #pygame.init()
 
@@ -25,7 +28,7 @@ background_position = [0, 0]
 # Load and set up graphics.
 #background_image = pygame.image.load("saturn_family1.jpg").convert()
 player_image = pygame.image.load(r"F:\Tanya_Python\repository\python\Images\plane.png").convert_alpha()
-player_image = pygame.transform.scale(player_image, (50,50))
+player_image = pygame.transform.scale(player_image, (WIDTH_IMAGE, HEIGHT_IMAGE))
 
 #Якщо в зображення не має прозорого слою, то щоб його встановити,
 #необхідно використати метод set_colorkey() класу Surface:
@@ -51,14 +54,14 @@ while not done:
     # Copy image to screen:
 #копіює картинку на екран
 
-    if x>5:
-        x=x
-    if x>WIDTH_DISPLAY-50:
-        x=WIDTH_DISPLAY-50
-    if y>5:
-        y=y
-    if y>HEIGHT_DISPLAY-50:
-        y=y-50
+    if x > 0:
+        x = x
+    if x > WIDTH_DISPLAY-WIDTH_IMAGE:
+        x = WIDTH_DISPLAY-WIDTH_IMAGE
+    if y > 5:
+        y = y
+    if y>HEIGHT_DISPLAY-HEIGHT_IMAGE:
+        y = y-HEIGHT_IMAGE
 
     screen.blit(player_image, [x, y])
 
